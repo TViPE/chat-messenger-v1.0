@@ -12,10 +12,6 @@
 	text-transform: uppercase;
 }
 
-#loginWindow {
-	display: none;
-}
-
 #chatWindow {
 	margin-top: 5vh;
 }

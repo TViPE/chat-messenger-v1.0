@@ -9,12 +9,15 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="style.css">
 		
+		<!--jQuery -->
+		<script src="jquery-3.2.1.min.js"></script>
+		
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<!-- Socket -->
 		<script src="socket.io/socket.io.js"></script>
-		<script stc="chatHandle.js"></script>
+		<script src="chatHandle.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -27,13 +30,13 @@
 				<h2>Chat Window</h2>
 				<div id="left" class="text-center">
 					<h3>Online Users List</h3>
-					<div class="onlineUsers"></div>
+					<div id="onlineUsers"></div>
 				</div>
 				<div id="right" class="text-center">
 					<div id="chatOutput">
 						<div class="row">
 							<div class="col-md-12">
-								this is chat output
+								
 							</div>
 						</div>
 					</div>
