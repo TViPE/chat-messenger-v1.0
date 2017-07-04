@@ -1,0 +1,13 @@
+.container{
+	height: 100vh;
+}
+
+#loginWindow {
+	margin-top: 40vh;
+}
+#loginWindow button {
+	margin-top: 10px;
+}
+#loginWindow h3 {
+	text-transform: uppercase;
+}
