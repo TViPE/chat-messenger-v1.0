@@ -19,12 +19,39 @@
 	<body>
 		<div class="container">
 			<div id="loginWindow" class="text-center">
-				<h3>Login Form</h3>
+				<h3 class=>Login Form</h3>
 				<input type="text" class="form-control" placeholder="Enter your name" id="usernameTxt">
 				<button class="btn btn-info btn-block" id="registerBtn">Register</button>
 			</div>
 			<div id="chatWindow">
-				
+				<h2>Chat Window</h2>
+				<div id="left" class="text-center">
+					<h3>Online Users List</h3>
+					<div class="onlineUsers"></div>
+				</div>
+				<div id="right" class="text-center">
+					<div id="chatOutput">
+						<div class="row">
+							<div class="col-md-12">
+								this is chat output
+							</div>
+						</div>
+					</div>
+					<div>
+						<h4>Welcome to chat forum: <span id="currentUser"></span></h4>
+					</div>
+					<div id="chatTypingInput">
+						<div class="input-group">
+						   <input type="text" class="form-control" id="messageTxt" placeholder="Message...">
+						   <span class="input-group-btn">
+						        <button class="btn btn-success" type="button" id="messageBtn">Send</button>
+						   </span>
+						</div>
+					</div>
+					<div id="logoutSection">
+						<button class="btn btn-danger btn-block" id="logoutBtn">Log Out</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

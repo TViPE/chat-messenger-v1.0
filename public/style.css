@@ -11,3 +11,45 @@
 #loginWindow h3 {
 	text-transform: uppercase;
 }
+
+#loginWindow {
+	display: none;
+}
+
+#chatWindow {
+	margin-top: 5vh;
+}
+#left {
+	width: 30%;
+	height: 80vh;
+	float: left;
+	border: 1px solid black;
+}
+
+#right {
+	width: 70%;
+	height: 80vh;
+	float: right;
+	border: 1px solid black;
+	border-left: none;
+}
+
+#chatOutput {
+	height: 60vh;
+	border: 1px solid black;
+	margin: 10px;
+}
+
+#chatTypingInput {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#logoutSection {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#logoutBtn {
+	margin-top: 20px;	
+}
