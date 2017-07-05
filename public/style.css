@@ -1,5 +1,6 @@
 .container{
 	height: 100vh;
+	background-color: #f9fafc;
 }
 
 #loginWindow {
@@ -19,21 +20,25 @@
 	width: 30%;
 	height: 80vh;
 	float: left;
-	border: 1px solid black;
+	
+	background-color: #13366d;
+	color: white;
 }
 
 #right {
 	width: 70%;
 	height: 80vh;
 	float: right;
-	border: 1px solid black;
+	border: 1px solid #f2f7ff;
 	border-left: none;
+	background-color: #eff1f4;
 }
 
 #chatOutput {
 	height: 60vh;
-	border: 1px solid black;
+	border: 1px solid #eff1f4;
 	margin: 10px;
+	background-color: white;
 }
 
 #chatTypingInput {
@@ -48,4 +53,13 @@
 
 #logoutBtn {
 	margin-top: 20px;	
+}
+
+#chatOutputTxt {
+	padding-left: 10px;
+}
+
+#feedback {
+	padding-left: 10px;
+	color: #6d97a3;
 }
