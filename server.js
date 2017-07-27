@@ -23,7 +23,7 @@ io.on('connection', function (socket) {
 	//server is listenning to events
 	socket.on('user-send-registration', function (data){
 		// registration fail - name (data) is already registered
-		if(userArr.indexOf(data) >=0){
+		if(userArr.indexOf(data) >= 0){
 			socket.emit("server-send-registration-fail");
 		} else {
 			//registration success 
@@ -68,4 +68,18 @@ io.on('connection', function (socket) {
 		console.log('stop-typing');
 		socket.broadcast.emit('server-send-stop-typing', data);
 	});
+
+	socket.on('disconnect', function(){
+		// console.log('user disconnected');
+		// var userIndex = userArr.indexOf(socket.username);
+		// console.log("Index of user: " + userIndex);
+		// userArr.splice(userIndex, 1);
+		// console.log('disconnecting');
+		// io.sockets.emit("server-update-userlist", userArr);
+		console.log('disconnecting from socket_id: ' + socket.username);
+		var userIndex =  userArr.indexOf(socket.username);
+		console.log("Index of user: " + userIndex);
+		userArr.splice(userIndex, 1);
+		io.sockets.emit("server-update-userlist", userArr);
+	})
 });

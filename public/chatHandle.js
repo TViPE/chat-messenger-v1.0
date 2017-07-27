@@ -1,4 +1,5 @@
-var socket = io.connect('https://tv-messenger.herokuapp.com');
+//var socket = io.connect('https://tv-messenger.herokuapp.com');
+var socket = io.connect('http://localhost:3000');
 
 socket.on('server-send-registration-fail', function(){
 	window.alert("This name is already registerd. Please choose different name!");
@@ -36,6 +37,7 @@ socket.on('server-send-typing-user', function (data){
 socket.on('server-send-stop-typing', function (data){
 	$('#feedback').html('');
 });
+
 	
 $(document).ready(function(){
 	//window.alert('hello');
