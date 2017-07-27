@@ -10,7 +10,6 @@ var io = require('socket.io')(server);
 
 // server listen on port 3000 or default port on env
 server.listen(process.env.PORT || 3000);
-})
 
 //set up route for app
 app.get('/', function (req, res) {
