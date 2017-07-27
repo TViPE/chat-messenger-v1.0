@@ -9,8 +9,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 // server listen on port 3000 or default port on env
-server.listen(3000, function() {
-	console.log('listening on port 3000');
+server.listen(process.env.PORT || 3000);
 })
 
 //set up route for app
