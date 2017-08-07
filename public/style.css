@@ -1,3 +1,6 @@
+body {
+	background-color: #f9fafc;
+}
 .container{
 	height: 100vh;
 	background-color: #f9fafc;
@@ -5,6 +8,10 @@
 
 #loginWindow {
 	margin-top: 40vh;
+	width: 300px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #loginWindow button {
 	margin-top: 10px;

@@ -2,7 +2,7 @@ var socket = io.connect('https://tv-messenger.herokuapp.com');
 //var socket = io.connect('http://localhost:3000');
 
 socket.on('server-send-registration-fail', function(){
-	window.alert("This name is already registerd. Please choose different name!");
+	window.alert("This name is already registered. Please choose different name!");
 });
 
 socket.on('server-send-registration-success', function (data){
@@ -27,7 +27,7 @@ socket.on('server-send-logout-success', function(){
 socket.on('server-send-message-to-all-users', function (data){
 	$('#messageTxt').val("");
 	$('#chatOutputTxt').append('<p><strong>' + data.user + ':</strong> ' + data.message + '</p>');
-	console.log('hhhh');
+	$('#chatOutput')[0].scrollTop = $('#chatOutput')[0].scrollHeight;
 });
 
 socket.on('server-send-typing-user', function (data){
@@ -43,6 +43,7 @@ $(document).ready(function(){
 	//window.alert('hello');
 	$('#loginWindow').show();
 	$('#chatWindow').hide();
+	$('#chatOutput')[0].scrollTop = $('#chatOutput')[0].scrollHeight;
 
 	// registration
 	$('#registerBtn').click(function(){
@@ -61,6 +62,7 @@ $(document).ready(function(){
 			message: $('#messageTxt').val()
 		}
 		socket.emit('user-send-message', messageObj);
+		$('#chatOutput')[0].scrollTop = $('#chatOutput')[0].scrollHeight;
 	});
 
 	$('#messageTxt').focusin(function(){
