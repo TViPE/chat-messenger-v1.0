@@ -1,5 +1,7 @@
+var compression = require('compression');
 var express = require('express');
 var app = express();
+app.use(compression());
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.static('public'));
